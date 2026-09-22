@@ -1,0 +1,18 @@
+jar_limit = int(input("Enter jar limit:"))
+min_limit = int(input("Enter min limit:"))
+initial_jar = jar_limit
+choice = 'y'
+total_sold = 0
+while choice != 'n':
+    candies_sold = int(input("Enter candies to sold:"))
+    if candies_sold > jar_limit:
+        print("Invalid input")
+    else:
+        jar_limit = jar_limit - candies_sold
+        total_sold = total_sold + candies_sold
+        print("Sold:", candies_sold)
+        if jar_limit <= min_limit:
+            jar_limit = initial_jar
+        print("Available candies:", jar_limit)
+        choice = input("Do you want to continue(y/n):")
+        print("Total sold", total_sold)
