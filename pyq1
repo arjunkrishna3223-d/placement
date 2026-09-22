@@ -1,0 +1,13 @@
+n=int(input("enter number of monkeys"))
+m=int(input("enter number of banana"))
+p=int(input("enter number of peanut"))
+k=int(input("enter number of eatable Bananas by Single Monkey"))
+j=int(input("enter number of eatable  Peanuts by single Monkey"))
+if (k<0 or j<0):
+  print("invalid")
+else:
+  a=(m//k)+(p//j)
+  if (m%k>0 or p%j>0):
+    a=a-1
+print("no of monkey eaten ",a)
+print(" balance Monkey on tree are",n-a)
